@@ -1,12 +1,16 @@
 #main-content{
     margin: 5%; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
+#main-content:nth-child(1){flex-grow: 1;}
+#main-content:nth-child(1){display: flex;}
  
 li{
     font-size:18px;
     margin-top:1%;
 }
-
 
 h2{
     font-size: 50px;
@@ -14,42 +18,47 @@ h2{
     background-color: black;
     color: white;
     padding: 0.5%;
+    order: 1;
+    align-self: flex-start
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-style: normal;
+}
+a:hover{color: rgba(255, 17, 0, 0.822);}
+
+div h4{
+    font-size:30px;
+    font-style: italic;
+    margin-bottom: 1%;
 }
 
 #card{
-    width: 25%;
-    display: block;
-    border-top: none;
     border-right: 0.5px solid black;
     padding: 2%;
-    position: fixed;
-    right: 5%;
 }
-
-#card aside{
-    text-align: right;
-}
-
+#card{text-align: right;}
 #card h4{
     font-size:35px;
     line-height: 1%;
     margin-bottom: 10%;
 }
-
-#card aside #info li{
+#card #info li{
     font-size:19px;
     font-style: italic;
-}
+} 
 
 #pic-me{
-    z-index: -1; 
+    z-index: -1;
     /* Set rules to fill background */
     min-height: 100%;
-    min-width: 1024px;
+    min-width: 1024px; 
 	
     /* Set up proportionate scaling */
     width: 100%;
-    height: auto;
+    height: auto; 
         
     /* Set up positioning */
     position: fixed;
@@ -61,33 +70,35 @@ h2{
 
 }
 
-a{
-    text-decoration: none;
-    color: black;
-    font-style: normal;
-}
-
-a:hover{
-    color: rgba(255, 17, 0, 0.822);
-}
-
-#education{
-    margin-top: 3%;
-    margin-left:2%;
-    border-left:0.5px solid black;
-    padding-left: 1%;
-}
-
-#skills h4, #education h4, #langs h4{
-    font-size:30px;
-    font-style: italic;
-    margin-bottom: 1%;
-}
-
-#skills, #langs{
-    margin-top: 2%;
+#third-block div{
+    margin-top: 10%;
     margin-left: 2%;
-    float: left;
     border-left:0.5px solid black;
     padding-left: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
 }
+
+#third-block div:nth-child(2){
+    margin-left: 2%;
+}
+
+@media(min-width:900px){
+    #third-block div{
+        margin-top: 5%;
+        justify-content: flex-start;
+        display: flex;
+    }
+    #third-block div ul{
+        margin-left: 10%;
+    }
+    #third-block div:nth-child(1){
+        margin-top: 15%;
+    }
+    #third-block div:last-child{
+        margin-bottom: 15%;
+    }
+}
+
