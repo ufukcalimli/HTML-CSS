@@ -82,7 +82,7 @@ div h4{
 }
 
 #third-block div:nth-child(2){
-    margin-left: 2%;
+    margin-left: 2%;  
 }
 
 @media(min-width:900px){
